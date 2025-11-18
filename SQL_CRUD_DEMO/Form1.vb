@@ -19,7 +19,5 @@ Public Class Form1
             MessageBox.Show("Connection Failed: " & ex.Message)
             conn.Close()
         End Try
-
-
     End Sub
 End Class
