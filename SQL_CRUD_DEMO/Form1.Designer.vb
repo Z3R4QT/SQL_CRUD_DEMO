@@ -27,9 +27,9 @@ Partial Class Form1
         '
         'btnConnect1
         '
-        Me.btnConnect1.Location = New System.Drawing.Point(52, 33)
+        Me.btnConnect1.Location = New System.Drawing.Point(39, 93)
         Me.btnConnect1.Name = "btnConnect1"
-        Me.btnConnect1.Size = New System.Drawing.Size(143, 55)
+        Me.btnConnect1.Size = New System.Drawing.Size(225, 154)
         Me.btnConnect1.TabIndex = 0
         Me.btnConnect1.Text = "Connect My SQL"
         Me.btnConnect1.UseVisualStyleBackColor = True
