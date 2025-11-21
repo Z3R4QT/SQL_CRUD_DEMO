@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Forms.VisualStyles
+Imports MySql.Data.MySqlClient
 
 Public Class Form1
 
@@ -39,5 +40,43 @@ Public Class Form1
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub btnRead_Click(sender As Object, e As EventArgs) Handles btnRead.Click
+        Dim Query As String = "SELECT * FROM crud_demo_db.`students_tbl`;"
+        Try
+            Using conn As New MySqlConnection("server=localhost; userid=root; password=root; database=crud_demo_db;")
+                Dim adapter As New MySqlDataAdapter(Query, conn)
+                Dim table As New DataTable()
+                adapter.Fill(table)
+                DataGridView1.DataSource = table
+                DataGridView1.Columns("id").Visible = False
+
+
+
+            End Using
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
+        If e.RowIndex >= 0 Then
+            Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+            txtName.Text = selectedRow.Cells("Name").Value.ToString()
+            txtAge.Text = selectedRow.Cells("Age").Value.ToString()
+            txtEmail.Text = selectedRow.Cells("Email").Value.ToString()
+            txtHiddenID.Text = selectedRow.Cells("id").Value.ToString()
+        End If
+    End Sub
+
+
+
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtHiddenID.TextChanged
+
     End Sub
 End Class

@@ -30,13 +30,17 @@ Partial Class Form1
         Me.txtAge = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.btnCreate = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnRead = New System.Windows.Forms.Button()
+        Me.txtHiddenID = New System.Windows.Forms.TextBox()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnConnect1
         '
         Me.btnConnect1.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnConnect1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConnect1.Location = New System.Drawing.Point(89, 64)
+        Me.btnConnect1.Location = New System.Drawing.Point(89, 32)
         Me.btnConnect1.Name = "btnConnect1"
         Me.btnConnect1.Size = New System.Drawing.Size(259, 154)
         Me.btnConnect1.TabIndex = 0
@@ -108,14 +112,47 @@ Partial Class Form1
         Me.btnCreate.Name = "btnCreate"
         Me.btnCreate.Size = New System.Drawing.Size(259, 68)
         Me.btnCreate.TabIndex = 7
-        Me.btnCreate.Text = "Insert Data"
+        Me.btnCreate.Text = "CREATE Data"
         Me.btnCreate.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(408, 32)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(441, 480)
+        Me.DataGridView1.TabIndex = 8
+        '
+        'btnRead
+        '
+        Me.btnRead.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnRead.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRead.Location = New System.Drawing.Point(89, 444)
+        Me.btnRead.Name = "btnRead"
+        Me.btnRead.Size = New System.Drawing.Size(259, 68)
+        Me.btnRead.TabIndex = 9
+        Me.btnRead.Text = "READ Data"
+        Me.btnRead.UseVisualStyleBackColor = False
+        '
+        'txtHiddenID
+        '
+        Me.txtHiddenID.BackColor = System.Drawing.SystemColors.WindowFrame
+        Me.txtHiddenID.Location = New System.Drawing.Point(186, 200)
+        Me.txtHiddenID.Multiline = True
+        Me.txtHiddenID.Name = "txtHiddenID"
+        Me.txtHiddenID.Size = New System.Drawing.Size(162, 32)
+        Me.txtHiddenID.TabIndex = 10
+        Me.txtHiddenID.Visible = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(565, 538)
+        Me.ClientSize = New System.Drawing.Size(1143, 538)
+        Me.Controls.Add(Me.txtHiddenID)
+        Me.Controls.Add(Me.btnRead)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtAge)
@@ -126,6 +163,7 @@ Partial Class Form1
         Me.Controls.Add(Me.btnConnect1)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -139,4 +177,7 @@ Partial Class Form1
     Friend WithEvents txtAge As TextBox
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents btnCreate As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnRead As Button
+    Friend WithEvents txtHiddenID As TextBox
 End Class
