@@ -33,6 +33,8 @@ Partial Class Form1
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnRead = New System.Windows.Forms.Button()
         Me.txtHiddenID = New System.Windows.Forms.TextBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -108,9 +110,9 @@ Partial Class Form1
         '
         Me.btnCreate.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnCreate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCreate.Location = New System.Drawing.Point(89, 370)
+        Me.btnCreate.Location = New System.Drawing.Point(12, 370)
         Me.btnCreate.Name = "btnCreate"
-        Me.btnCreate.Size = New System.Drawing.Size(259, 68)
+        Me.btnCreate.Size = New System.Drawing.Size(141, 68)
         Me.btnCreate.TabIndex = 7
         Me.btnCreate.Text = "CREATE Data"
         Me.btnCreate.UseVisualStyleBackColor = False
@@ -128,9 +130,9 @@ Partial Class Form1
         '
         Me.btnRead.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.btnRead.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRead.Location = New System.Drawing.Point(89, 444)
+        Me.btnRead.Location = New System.Drawing.Point(12, 444)
         Me.btnRead.Name = "btnRead"
-        Me.btnRead.Size = New System.Drawing.Size(259, 68)
+        Me.btnRead.Size = New System.Drawing.Size(141, 68)
         Me.btnRead.TabIndex = 9
         Me.btnRead.Text = "READ Data"
         Me.btnRead.UseVisualStyleBackColor = False
@@ -145,11 +147,35 @@ Partial Class Form1
         Me.txtHiddenID.TabIndex = 10
         Me.txtHiddenID.Visible = False
         '
+        'btnUpdate
+        '
+        Me.btnUpdate.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.Location = New System.Drawing.Point(186, 370)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(141, 68)
+        Me.btnUpdate.TabIndex = 11
+        Me.btnUpdate.Text = "UPDATE Data"
+        Me.btnUpdate.UseVisualStyleBackColor = False
+        '
+        'btnDelete
+        '
+        Me.btnDelete.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Location = New System.Drawing.Point(186, 444)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(141, 68)
+        Me.btnDelete.TabIndex = 12
+        Me.btnDelete.Text = "DELETE DATA"
+        Me.btnDelete.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(889, 538)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.txtHiddenID)
         Me.Controls.Add(Me.btnRead)
         Me.Controls.Add(Me.DataGridView1)
@@ -180,4 +206,6 @@ Partial Class Form1
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnRead As Button
     Friend WithEvents txtHiddenID As TextBox
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnDelete As Button
 End Class
