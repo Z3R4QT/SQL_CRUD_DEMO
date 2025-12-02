@@ -19,7 +19,6 @@ Public Class Form1
             conn.Close()
         End Try
     End Sub
-
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
 
         Dim query As String = "INSERT INTO crud_demo_db.`students_tbl` (Name, age, email) VALUES ( @name, @age, @email);"
@@ -51,18 +50,12 @@ Public Class Form1
                 adapter.Fill(table)
                 DataGridView1.DataSource = table
                 DataGridView1.Columns("id").Visible = False
-
-
-
             End Using
 
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
-
     End Sub
-
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
         If e.RowIndex >= 0 Then
             Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
@@ -71,12 +64,5 @@ Public Class Form1
             txtEmail.Text = selectedRow.Cells("Email").Value.ToString()
             txtHiddenID.Text = selectedRow.Cells("id").Value.ToString()
         End If
-    End Sub
-
-
-
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtHiddenID.TextChanged
-
     End Sub
 End Class
