@@ -93,7 +93,6 @@ Public Class Form1
             MsgBox(ex.Message)
         End Try
     End Sub
-
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         ' Dim query As String = "DELETE FROM `crud_demo_db`.`students_tbl` WHERE (`id` = @id);"
         Dim query As String = "UPDATE `crud_demo_db`.`students_tbl` 
